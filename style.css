@@ -1,0 +1,270 @@
+body {margin: 0;padding: 0;font-family: sans-serif;}
+
+ul {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+ul li {
+  list-style: none;
+}
+ul li a {
+  position: relative;
+  display: block;
+  margin: 0 10px;
+  padding: 5px 10px;
+  color: #D2B48C;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  overflow: hidden;
+}
+ul li a::before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 2px);
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: #D2B48C;
+  transition: 0.5s;
+}
+ul li a:hover {
+  color: #fff;
+}
+ul li a:hover::before {
+  animation: animate .5s linear forwards; 
+}
+
+@keyframes animate {
+  0% {
+    top: calc(50% - 2px);
+    left: -100%;
+    height: 4px;
+    z-index: 1;
+  }
+  50% {
+    top: calc(50% - 2px);
+    left: 0;
+    height: 4px;
+    z-index: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+
+
+* {
+box-sizing: border-box;
+}
+body {
+background-color: #FFFFFF;
+padding: 50px;
+font-family: Arial;
+}
+section {
+max-width: 1000px;
+margin: auto;
+}
+h1 {
+font-size: 50px;
+word-break: break-all;
+}
+.row {
+margin: 0px;
+}
+.row,
+.row > .column {
+padding: 50px;
+}
+.column {
+float: left;
+width: 50%;
+}
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+.content {
+background-color: white;
+padding: 0px;
+}
+img {
+width: 100%;
+}
+@media screen and (max-width: 900px) {
+.column {
+width: 50%;
+}
+}
+@media screen and (max-width: 600px) {
+.column {
+width: 100%;
+}
+}
+
+
+
+h3{
+position: absolute;
+top: 200px;
+left: 250;
+width: 50%;
+color:#FFFFFF;
+font-size: 25px;
+}
+p{
+position: absolute;
+top: 350px;
+left: 220;
+width: 50%;
+color:#FFFFFF;
+font-size: 17px;
+}
+
+
+
+label, span {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+input[type="text"], input[type="email"], input[type="date"], input[type="password"]{
+  width: 100%;
+  padding: 10px 20px;
+  border-width: 0;
+  background: #e6e6e6;
+  outline: none;
+  margin: 0;
+}
+input[type="text"]:focus, input[type="email"]:focus,input [type="password"]:focus{
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.2);
+}
+.radio label {
+  position: relative;
+  padding-left: 50px;
+  cursor: pointer;
+  width: 50%;
+  float: left;
+  line-height: 40px;
+}
+.radio input {
+  position: absolute;
+  opacity: 0;
+}
+.radio-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background: #e6e6e6;
+  border-radius: 50%;
+  text-align: center;
+}
+.male:before {
+  content: "\2642";
+  font-family: FontAwesome;
+  font-weight: bold;
+}
+.female:before {
+  content: "\2640";
+  font-family: FontAwesome;
+  font-weight: bold;
+}
+.radio label:hover input ~ .radio-control,
+.radiol input:focus ~ .radio-control {
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,.2);
+}
+.radio input:checked ~ .radio-control {
+  color: red;
+}
+button {
+  padding: 10px 0;
+  border-width: 0;
+  display: block;
+  width: 120px;
+  margin: 25px auto 0;
+  background: #D2B48C;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  text-transform: uppercase;
+}
+
+
+
+.center-img {
+  display: block;
+  margin: 0 auto;
+filter: blur(1.5px);
+}
+
+.container {
+  display: block;
+  position: relative;
+top: 10;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #D2B48C;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
