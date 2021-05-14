@@ -1,0 +1,85 @@
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<ul>
+  <li><a href="#">Главная</a></li>
+  <li><a href="#">О нас</a></li>
+  <li><a href="#">Меню</a></li>
+  <li><a href="#">Мастр - класс</a></li>
+  <li><a href="#">Контакты</a></li>
+</ul>
+</head>
+
+<body>
+
+<div class="row">
+<div class="column">
+<div class="content">
+<img src="fffffffffff.jpg" class="center-img" />
+<h3>Мастер - класс:<br />Французская выпечка <br /><br />12 апреля в 19:00</h3>
+<p>Будем готовить:<br/> - Шоколадный Фондан<br/> - Клубничные галеты из слоеного теста<br/> - Круасаны с шоколадной начинкой<br/> <br/> Стоимость: 2500<br/> <br/> Для записи заполните форму</p>
+</div>
+</div>
+
+<div class="column">
+<div class="content">
+<form method="post" action="form.php">
+
+    <div>
+      <label for="name">Имя *</label>
+      <input type="text" name="name" required>
+    </div>
+
+    <div>
+      <label for="sname">Фамилия *</label>
+      <input type="text" name="sname" required>
+    </div>
+
+    <div>
+      <label for="email">E-mail *</label>
+      <input type="email" name="email" required>
+    </div>
+
+    <div>
+      <label for="password">Пароль *</label>
+      <input type="password" name="password" minlength="6" maxlength="10" placeholder="не менее 6 символов" required>
+
+    </div>
+
+    <div class="radio">
+      <span>Пол</span>
+      <label>
+        <input type="radio" name="sex" value="мужской">мужской
+        <div class="radio-control male"></div>
+      </label>
+      <label>
+        <input type="radio" name="sex" value="женский">женский
+        <div class="radio-control female"></div>
+      </label>
+    </div>
+
+    <div>
+         <label for="date">Дата рождения: </label>
+         <input type="date" name="date"/> 
+    </div> 
+
+    <div>
+         <label for="phone">Телефон: </label>
+         <input type="text" placeholder="+7 (XXX)-XXX-XXXX" name="phone"/>
+    </div> 
+
+<label class="container">Подписаться на рассылку
+  <input type="checkbox" checked="checked">
+  <span class="checkmark"></span>
+</label>
+
+    <button type="submit">Отправить</button> 
+  </form> 
+</div>
+</div>
+</div>
+
+
+</body>
+</html>
